@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(45deg,#280399,#4001FF,#6D3DFF);
+        }
+
+        .tela-login{
+            background-color: rgba(0,0,0,0.7);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 80px;
+            border-radius: 15px;
+            color: white;
+
+        }
+
+        input{
+            padding: 15px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+
+        button{
+            background-color: dodgerblue;
+            cursor: pointer;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 10px;
+            color: white;
+            font-size: 15px;
+            transition: .4s;
+        }
+
+        button:hover{
+            background-color:#280399;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tela-login">
+        <h1>login</h1>
+        <input type="text" id="login" placeholder="Login"><br><br>
+        <input type="password" id="senha" placeholder="Senha"><br><br>
+        <button onclick="logar()" >Enviar</button>
+    </div>
+</body>
+    <script>
+
+        const usuarios = [ 
+        {
+            login: 'Nilson',
+            senha:'1234'
+        },
+        {
+            login:'Ana',
+            senha:'2589'
+        },
+        {
+            login:'Gabi',
+            senha:'1346'
+        }
+
+        ]
+
+        let validaLogin = false
+
+        function logar(){
+            let pegaUsuario = document.getElementById('login').value;
+            let pegaSenha = document.getElementById('senha').value;
+
+            for(let i in usuarios){
+
+                if(pegaUsuario == usuarios[i].login && pegaSenha == usuarios[i].senha){
+                   validaLogin = true
+                    break
+                }
+            }
+            
+            if (validaLogin == true){
+                location.href = 'home.html'
+            }else{
+                alert('Validação Invalida')
+            }
+               
+        }
+    </script>
+</html>
