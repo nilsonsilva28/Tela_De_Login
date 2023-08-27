@@ -13,4 +13,4 @@ JavaScript - Linguagem de programação responsável por deixar a página intera
 
 Para logar foi criado uma lista contendo login e senha em seguinda foi criado uma função onde recebe duas variáveis uma para usuário e outro para senha que
 recebe o 'id' correspodente a cada variável onde foi criado uma laço de repetição onde ele percorre toda lista e em seguida foi criado uma validação 
-onde recebe a localização onde o usuário fará o login . Assim qunado o usuário clicar mudará para proxima página .
+onde recebe a localização onde o usuário fará o login . Assim quando o usuário clicar mudará para proxima página .
